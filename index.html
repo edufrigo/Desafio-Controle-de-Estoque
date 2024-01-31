@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Controle de Estoque</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>BrilhoFácil</h1>
+    </header>
+
+    <section>
+        <h1>Cadastrar Loja</h1>
+        <form id="primeiroformu">
+            <label for="nomeLoja">Nome da loja:</label>
+            <input type="text" id="nomeLoja" required>
+            <button type="button" onclick="cadastrarLoja()">Cadastrar Loja</button>
+        </form>
+        <div id="resultadoLoja"></div>
+    </section>
+
+    <section>
+        <h1>Cadastrar Fornecedor</h1>
+        <form id="segundoformu">
+            <label for="nomeFornecedor">Nome do Fornecedor:</label>
+            <input type="text" id="nomeFornecedor" required>
+            <button type="button" onclick="cadastrarFornecedor()">Cadastrar Fornecedor</button>
+        </form>
+        <div id="resultadoFornecedor"></div>
+    </section>
+
+    <section>
+        <h1>Estoque</h1>
+        <table id="estoqueTable">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade Atual</th>
+                    <th>Entradas</th>
+                    <th>Saídas</th>
+                    <th>Saldo por Produto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados serão automaticamente adicionados -->
+            </tbody>
+        </table>
+        <p id="saldoTotal">Saldo Total em Estoque: <span id="total"></span></p>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
